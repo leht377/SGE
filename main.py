@@ -9,7 +9,7 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-
+# Solo para detectar cambios
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'nacional2015'
