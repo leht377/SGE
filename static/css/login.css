@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;    
+}
+body .main{
+    width: 100%;
+    height: 100%;
+    background:url("/static/image/FondoLogin.jpg");
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .formulario{
+    width: 520px;
+    height:550px;
+    background:white;
+    background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+    );
+    border-radius: 1rem;
+    backdrop-filter: blur(1.5rem);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+body .formulario form{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+}
+body .formulario form .box_input_login{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-bottom: 2px solid #014283;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+body .formulario form .box_input_login label{
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+body .formulario form .box_input_login input{
+    padding: 5px;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    font-weight: bold;
+}
+
+body .formulario form #box_pass input{
+    width: 90%;
+}
+
+body .formulario form #box_pass > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+body .formulario form #box_pass i{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+body .formulario form #box_submit {
+    width: 90%;
+    margin-top: 60px;
+}
+body .formulario form #box_submit input{
+    width: 100%;
+    display: block;
+    padding: 20px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #014283;
+    color: white; 
+}

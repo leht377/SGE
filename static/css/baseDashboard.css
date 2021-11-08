@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: #014283;
+}
+body main{
+    width: 97%;
+    height: 96%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 3fr ;   
+    overflow: hidden;
+    border-radius: 5px; 
+    /* border: 2px solid black; */
+    box-shadow: 1px 2px 14px 9px rgba(0,0,0,0.76);
+}
+
+
+
+body main .dashboard{
+    grid-column:2/3 ;
+    display: grid;
+    grid-template-columns:1fr ;
+    grid-template-rows: 1fr 5fr;
+    background-color: rgb(255, 255, 255);
+
+}
+body main .dashboard .cabezera_dash{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-row: 1/2;
+    border-bottom: 1px solid #014283;;
+}
+
+body main .dashboard .cabezera_dash .box_SGE{ 
+    padding: 10px 20px;
+    background: linear-gradient(
+        to right bottom,
+        rgba(1,66,131,1),
+        rgba(1, 66, 131, 0.9)
+    );
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+body main .dashboard .cabezera_dash .box_search{
+  
+  padding: 8px 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1.5px solid #014283;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .dashboard .cabezera_dash #form_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body main .dashboard .cabezera_dash #form_search #searchEmpleado {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 100%;
+}
+body main .dashboard .dashboard_user{
+    grid-row: 2/3;
+    display: grid;
+    grid-auto-rows: 1fr 10fr;
+}
+body main .dashboard .dashboard_user .box-crearUser{
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 20px;
+}
+body main .dashboard .dashboard_user .box-crearUser a{
+    padding: 10px 20px;
+    background: linear-gradient(
+        to right bottom,
+        rgba(1,66,131,1),
+        rgba(1, 66, 131, 0.9)
+    );
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+body main .dashboard .dashboard_user .box-contenidoDash{
+    width: 100%;
+    height: 100%;
+    grid-row: 2/3;
+    padding: 10px 20px;
+}
+
+body main .opciones_usuario{
+    grid-column:1/2 ;
+    /* background-color: #014283; */
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(
+        to right bottom,
+        rgba(1,66,131,1),
+        rgba(1, 66, 131, 0.9)
+    );
+}
+
+body main .opciones_usuario #img_user{
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+}
+
+body main .opciones_usuario .opciones_userActual{
+    width: 100%;
+    margin-top: 40px;    
+}
+body main .opciones_usuario .opciones_userActual ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body main .opciones_usuario .opciones_userActual ul > a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 20px 20px;
+    display: block;
+    transition: 0.5s all;
+    text-align: left;
+
+}
+
+body main .opciones_usuario .opciones_userActual ul > a:hover{
+    background-color: #013468;
+    transition: 0.5s all;
+    
+}
+
+body main .opciones_usuario #name_usuario{
+    color: white;
+    font-weight: bold;
+}

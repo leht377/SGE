@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/baseDashboard.css')}}">
+    <script src="https://kit.fontawesome.com/dc694244d4.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <main>
+        <aside class="opciones_usuario">
+            <p id="name_usuario"> {{ informacion[1] }} {{ informacion[2] }}</p>
+            <img src="../static/image/user.png" id="img_user" alt="" srcset="">
+            <div class="opciones_userActual">
+                <ul>
+                    <a href="/Dashboard/informacion_personal">Ver información</a>
+                    <a href="/Dashboard/ver_retroalimentacion">Ver retroalimentación</a>
+                    {% if informacion[3] != 1 %}
+                        <a href="/Dashboard/lista_empleados">Listar empleados</a>
+                    {% endif %}
+                    <a href="#">Salir</a>
+                </ul>
+                {% block opcionesUser %}
+                {% endblock %}
+            </div>
+        </aside>
+        <section class="dashboard">
+            <div class="cabezera_dash">
+                <div class="box_SGE">
+                    <label for="">SGE</label>
+                </div>
+                <div class="messaje_rol">
+                    <p for="" style="font-weight: bold;">{{ informacion[4] }}</p>
+                </div>
+                <div class="box_search">
+                    <form action="" method="post" id="form_search">
+                        {{form.hidden_tag()}}
+                        {{ csrf_token }}
+                        {{ form.search()}}
+                        <i class="fas fa-search"></i>
+                    </form>
+                </div>
+            </div>
+            <div class="dashboard_user">
+                <div class="box-crearUser">
+                    <a href="">Crear empleado</a>
+                </div>
+                <div class="box-contenidoDash">
+                    {% block contenidodash %}
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

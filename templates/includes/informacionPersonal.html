@@ -1,0 +1,33 @@
+{% extends "baseDashboard.html" %} 
+{% block contenidodash %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/informacionPersonal.css')}}">
+    <div class="contenido_informacion">
+        <div class="detallesinfo">
+        <label for="Cedula">Cedula: </label>
+        <input type="text" value="{{ datosUsuario[0] }}" name="" id="txtCedula" readonly='readonly' class="informacion_estilos">
+        <label for="Nombre">Nombre: </label>
+        <input type="text" value="{{ datosUsuario[1] }}" name="" id="txtNombre" readonly='readonly' class="informacion_estilos">
+        <label for="Apellido">Apellido: </label>
+        <input type="text" value="{{ datosUsuario[2] }}" name="" id="txtApellido" readonly='readonly' class="informacion_estilos">
+        <label for="Telefono">Telefono: </label>
+        <input type="text" value="{{ datosUsuario[3] }}" name="" id="txtTelefono" readonly='readonly' class="informacion_estilos">
+        <label for="Salario">Salario: </label>
+        <input type="text" value="{{ datosUsuario[4] }}" name="" id="txtSalario" readonly='readonly' class="informacion_estilos">
+        <label for="Dependencia">Dependencia: </label>
+        <input type="text" value="{{ datosUsuario[5] }}" name="" id="txtDependencia" readonly='readonly' class="informacion_estilos">
+        <label for="FechaIngreso">Fecha de Ingreso: </label>
+        <input type="text" value="{{ datosUsuario[7] }}" name="" id="txtFechaIngreso" readonly='readonly' class="informacion_estilos">
+        <label for="Fechaterminacion">Fecha de terminacion: </label>
+        <input type="text" value="{{ datosUsuario[8] }}" name="" id="txtFechaTerminacion" readonly='readonly' class="informacion_estilos">
+        <label for="TipoContrato ">Tipo de contrato: </label>
+        <input type="text" value="{{ datosUsuario[9] }}" name="" id="txtTipoContrato" readonly='readonly' class="informacion_estilos">
+        <label for="Usuario">Usuario: </label>
+        <input type="text" value="{{ datosUsuario[6] }}" name="" id="txtUsuario" readonly='readonly' class="informacion_estilos">
+        <label for="Rol">Rol: </label>
+        <input type="text" value="{{ datosUsuario[10] }}" name="" id="txtRol" readonly='readonly' class="informacion_estilos">
+        </div>
+        <div class="img_user"> 
+            <img src="../../static/image/user.png" alt="" srcset="">
+        </div>
+    </div>
+{% endblock %}
