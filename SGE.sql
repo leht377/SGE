@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `datos_de_usuario`;
 CREATE TABLE `datos_de_usuario` (
   `id` int NOT NULL,
   `usuario` varchar(30) NOT NULL,
-  `contrasena` varchar(70) NOT NULL,
+  `contrasena` LONGTEXT NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;

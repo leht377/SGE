@@ -11,6 +11,62 @@
 </head>
 
 <body>
+    <div class="modal" id="ventanaModal">
+        <div id='modalCrearEmpleado'>
+            <div class="titulo">
+                <h1>Crear Empleado</h1>
+            </div>
+            <div class='contenido_modal'>
+                <form action='/CrearEmpleado' method='POST' id='form_crearEmpleado'>
+                    {{form.hidden_tag()}}
+                    {{ csrf_token }}
+
+                    {{ formModal.Cedula.label }}
+                    {{ formModal.Cedula() }}
+
+                    {{ formModal.Nombre.label }}
+                    {{ formModal.Nombre() }}
+
+                    {{ formModal.Apellido.label }}
+                    {{ formModal.Apellido() }}
+
+                    {{ formModal.Telefono.label }}
+                    {{ formModal.Telefono() }}
+
+                    {{ formModal.Salario.label }}
+                    {{ formModal.Salario() }}
+
+                    {{ formModal.Dependecia.label }}
+                    {{ formModal.Dependecia() }}
+
+                    {{ formModal.Fecha_ingreso.label }}
+                    {{ formModal.Fecha_ingreso() }}
+
+                    {{ formModal.Fecha_terminacion.label }}
+                    {{ formModal.Fecha_terminacion() }}
+
+                    {{ formModal.Tipo_contrato.label }}
+                    {{ formModal.Tipo_contrato() }}
+
+                    {{ formModal.Rol.label }}
+                    {{ formModal.Rol() }}
+
+                    {{ formModal.Usuario.label }}
+                    {{ formModal.Usuario() }}
+
+                    {{ formModal.contrasena.label }}
+                    {{ formModal.contrasena() }}
+
+                    <div class='btnFormEmpleado'>
+                        {{ formModal.Guardar() }}
+                        <a id='CerrarModal'>Cerrar</a>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
     <main>
         <aside class="opciones_usuario">
             <p id="name_usuario"> {{ informacion[1] }} {{ informacion[2] }}</p>
@@ -47,7 +103,7 @@
             </div>
             <div class="dashboard_user">
                 <div class="box-crearUser">
-                    <a href="">Crear empleado</a>
+                    <a id="crearEmpleado">Crear empleado</a>
                 </div>
                 <div class="box-contenidoDash">
                     {% block contenidodash %}
@@ -57,5 +113,5 @@
         </section>
     </main>
 </body>
-
+<script src="{{url_for('static', filename='js/modal.js')}}"></script>
 </html>
